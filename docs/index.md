@@ -9,9 +9,9 @@ Here we dive into the omics and how to analyze data derived from DNA, RNA, Prote
 
 # The Omics
 
-* DNA
-* RNA
-* Protein
-* Metabolites
-* Microbiome
+* [DNA](DNA/DNA.md)
+* [RNA](RNA/RNA.md)
+* [Protein](Protein/Protein.md)
+* [Metabolite](Metabolite/Metabolite.md)
+* [Microbiome](Microbiome/Microbiome.md)
 
