@@ -4,8 +4,8 @@ Here we dive into the omics and how to analyze data derived from DNA, RNA, Prote
 
 # Prerequisites
 
-* Introduction to Linux
-* Introduction to R
+* [Introduction to Linux](IntroToLinux/IntroToLinux.md)
+* [Introduction to R](IntroToR/IntroToR.md)
 
 # The Omics
 
