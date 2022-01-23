@@ -61,39 +61,26 @@ Interactive sessions are great for quick jobs, but say you want to run a job tha
 
 ``` 
 #!/bin/bash
-
 #SBATCH --job-name=jobID
-
 #SBATCH --time=03-00:00:00
-
 #SBATCH --partition=batch
-
 #SBATCH --nodes=1
-
 #SBATCH --mem=64Gb
-
 #SBATCH --output=%j.out
-
 #SBATCH --error=%j.err
-
 #SBATCH --mail-type=ALL
-
 #SBATCH --mail-user=YourEmailAddress
 
 module load sra/2.10.8
 
 #dir will be the directory to store our fastq files​
-
 dir='fastq_storage'
 
 #make our directory and change into it
-
 mkdir -p $dir
-
 cd $dir
 
 #change the path to the sra accession list based on where you put it
-
 fastq-dump --outdir fastq --gzip --skip-technical --readids --read-filter pass --dumpbase --split-3 --clip $(</path_to_accession_list/SraAccList.txt)
 ```
 
