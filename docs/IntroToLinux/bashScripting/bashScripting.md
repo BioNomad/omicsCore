@@ -15,6 +15,12 @@ Here we see the first line is ```#!/bin/bash``` and this is essentially telling 
 Now we cannot run the script outright. That is because Linux automatically restricts permissions of new scripts. To get permission we us a command called ```chmod```. We can run ```chmod 775 test.sh``` to make this script available to everyone to read, write, and execute - Or we can use ```chmod 700 test.sh``` so that only you can read, write, and execute. Here we will let everyone modify/run it:
 
  ![](images/script2.PNG)
+ 
+## Permissions For You/Group/Others
+
+We can also specify permissions for you, the group and others. But first let's go into what is what:
+
+![](images/permissions.PNG)
 
 ## Using Variables
 
