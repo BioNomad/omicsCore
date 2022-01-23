@@ -134,7 +134,7 @@ We won't go through every test case, but for a thorough review take a look at [R
 2. [Intro To Basic Linux](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)
 3. [Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/grep.php)
 
-[Next Workshop: Bash Scripting](../bashScripting/bashScripting.md)
+[Next Workshop: HPC](../HPC/HPC.md)
 
 [Back To Introduction to Linux](../IntroToLinux.md)
 
