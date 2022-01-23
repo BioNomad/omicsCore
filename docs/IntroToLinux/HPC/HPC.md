@@ -13,7 +13,7 @@ Now that you have made it to the HPC cluster, you will be at a login node. And y
 
 ## Interactive Session
 
-Now there are a few workload managers out there, in this tutorial we will demonstrate Slurm - a popular choice for HPC users. SLURM comes with commands we can use to manage our workload. The Slurm command to get to an interactive session is ```srun```, here is an example:
+Now there are a few workload managers out there, in this tutorial we will demonstrate Slurm - a popular choice for HPC users. Slurm comes with commands we can use to manage our workload. The Slurm command to get to an interactive session is ```srun```, here is an example:
 
 ```srun -p batch -t 1-2:30:00 -n 1 --mem=2Gb --pty bash```
 
