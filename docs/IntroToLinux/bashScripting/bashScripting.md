@@ -72,7 +72,7 @@ Unix also has special characters for us to use:
 
 ```>>``` allows you to append the contents of a file, so let's add the last 3 lines of ```file2``` to ```file3```:
 
-![](append.PNG)
+![](images/append.PNG)
 
 ## Using a While Loop
 
