@@ -35,7 +35,7 @@ To go back to the login node, just use ```exit```
 
 ## Checking Avaialble Nodes
 
-We just demonstrated how to get to an interactive session on a compute node in the batch partition. But what if the batch partition is being used for other jobs? You can use the following to ```sinfo``` to identify partitions, their availability, time limit for which they can be used, how many nodes are available, their state, and the list of available nodes:
+We just demonstrated how to get to an interactive session on a compute node in the batch partition. But what if the batch partition is being used for other jobs? You can use ```sinfo``` to identify partitions, their availability, time limit for which they can be used, how many nodes are available, their state, and the list of available nodes:
 
 ![](images/sinfo.PNG)
 
