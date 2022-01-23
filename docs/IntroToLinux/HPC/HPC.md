@@ -41,7 +41,7 @@ We just demonstrated how to get to an interactive session on a compute node in t
 
 ## Using a Module
 
-Now what if you want to use some package, like BLAST, SRA Toolkit, etc.? You'll need the following commands before running your scripts:
+Now what if you want to use some package, like BLAST, SRA Toolkit, etc.? You'll need the following commands to investigate/load your modules:
 
 Checking available modules: ```module avail```
 
