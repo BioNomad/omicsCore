@@ -29,7 +29,13 @@ Chances are you are either working on a Mac or a Windows Machine. In Mac you can
 
 ## Getting the Lay of the Land
 
-So you've opened up a Linux terminal - Now what? Let's take a look around.
+So you've opened up a Linux terminal - Now what? Let's take a look around. Use ```whoami``` to get your username:
+
+![](images/whoami.PNG)
+
+Then you can see what groups you are a part of with ```groups```:
+
+![](images/groups.PNG)
 
 ### Checking Where You Are
 
@@ -89,7 +95,7 @@ Want to print something to the terminal? To print "Hello World" use: ```echo Hel
 
 To copy a file to another location, like moving ```file1``` to ```/home/jlaird-bio/Documents/subFolder/```, use ```cp file1 /home/jlaird-bio/Documents/subFolder/```:
 
-
+![](images/cp.PNG)
 
 ## Check What is in a File
 
@@ -123,6 +129,16 @@ To **m**a**k**e a new **dir**ectory, say a new directory called ```newdir```, us
 
 ![](images/mkdir.PNG)
 
+## How to Move/Rename a File
+
+If you want to **m**o**v**e a file, say ```file1``` to ```newdir```, you'll use ```mv file1 newdir/```:
+
+![](images/mv.PNG)
+
+Now if you want to rename a file, like say ```file1``` into ```newfilename```, use ```mv file1 newfilename```:
+
+![](images/mv-rename.PNG)
+
 ## How to Add to a File
 
 To add to a file you'll need to use a text editor like ```vi``` or ```nano```. We will demonstrate how to use ```vi```. To open a file, like ```file3```, use ```vi file3```:
@@ -135,9 +151,28 @@ To start writing hit ```i``` then ```Enter```:
 
 After you are done writing, you can save your work by typing ```Esc``` then ```:wq``` and hitting ```Enter```
 
+## How About Some Shortcuts?
+
+Names of files/directories can be long to avoid typing too much you can type the first couple of letters and then hit ```Tab``` to autocomplete the name.
+
+You can use ```~``` with ```cd``` if you would like to go to your home directory and ```../``` with ```cd``` if you'd like to go up one folder.
+
+Now if you have a long command that you use regularly, try making an alias! to do so you open the ```.bashrc``` folder in your home directory:
+
+![](images/alias1.PNG)
+
+Now remember to hit ```i``` to start typing your command like so:
+
+![](images/alias2.PNG)
+
+So here our alias is ```get2sub```, we will save this by hitting ```Esc```, then ```:wq```, then ```Enter``` to save. But we will need to source the updated file to get our new command. We can do that with ```source .bashrc```:
+
+![](images/alias3.PNG)
+
 
 # References
-1. [towards data science](https://towardsdatascience.com/why-do-bioinformaticians-avoid-using-windows-c5acb034f63c)
+1. [Towards Data Science](https://towardsdatascience.com/why-do-bioinformaticians-avoid-using-windows-c5acb034f63c)
+2. [Intro To Basic Linux](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)
 
 [Back To Introduction to Linux](../IntroToLinux.md)
 
