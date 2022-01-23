@@ -34,7 +34,7 @@ Here we define a variable ```sayinghi``` and use it before ```pwd``` so that whe
 
 ![](images/script4.PNG)
 
-Cool right? The onlything to note is you CANNOT use spaces and you reference that variable with a ```$```.
+Cool right? The only thing to note is you CANNOT use spaces and you reference that variable with a ```$```.
 
 ## Specify Variables Outside of the Script
 
