@@ -6,4 +6,6 @@ This workshop will be broken into three parts - command line basics, bash script
 * [Bash Scripting](bashScripting/bashScripting.md)
 * [HPC](HPC/HPC.md)
 
+___________________________________________________________________________________________________________________________________________________________________________________
+
 [Back To The Main Page](../index.md)
