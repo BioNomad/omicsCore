@@ -76,10 +76,43 @@ Let's talk about another useful special character - ```<```. This allows you to 
 
 So here we read a file and echo each line. However, how do we know which file we are reading? We do that with ```<``` and specify that we are reading whatever file we put as the first agrument
 
+## Finding Patterns
+
+Now what if you want to find patterns? The ```grep``` command can do that! 
+
+![](images/grep.PNG)
+
+So let's run through these:
+
+```grep 'a' file3``` will find the line with the pattern
+```grep -o 'a' file3``` will just find the pattern and not the whole line
+```grep -c 'a' file3``` will count how many times the pattern is found
+
+## Regular Expressions
+
+When finding patterns you can specify more complex patterns with regular expressions:
+
+```.``` (dot) - a single character.
+```?``` - the preceding character matches 0 or 1 times only.
+```*``` - the preceding character matches 0 or more times.
+```+``` - the preceding character matches 1 or more times.
+```{n}``` - the preceding character matches exactly n times.
+```{n,m}``` - the preceding character matches at least n times and not more than m times.
+```[agd]``` - the character is one of those included within the square brackets.
+```[^agd]``` - the character is not one of those included within the square brackets.
+```[c-f]``` - the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
+```()``` - allows us to group several characters to behave as one.
+```|``` (pipe symbol) - the logical OR operation.
+```^``` - matches the beginning of the line.
+```$``` - matches the end of the line.
+
+We won't go through every test case, but for a thorough review take a look at [Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/grep.php)
 
 ## References
 
 1. [Shebang (Unix)](https://en.wikipedia.org/wiki/Shebang_(Unix))
+2. [Intro To Basic Linux](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)
+3. [Ryan's Tutorials](https://ryanstutorials.net/linuxtutorial/grep.php)
 
 
 [Back To Introduction to Linux](../IntroToLinux.md)
