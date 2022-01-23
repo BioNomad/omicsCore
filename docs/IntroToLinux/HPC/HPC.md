@@ -112,6 +112,8 @@ If you are interested in learning more there are a lot of great tutorials out th
 
 1.[SchedMD](https://slurm.schedmd.com/quickstart.html)
 
+_________________________________________________________________________________________________________________________________________________________________________________
+
 [Back To Introduction to Linux](../IntroToLinux.md)
 
 [Back To The Main Page](../../index.md)
