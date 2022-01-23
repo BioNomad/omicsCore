@@ -169,6 +169,10 @@ So here our alias is ```get2sub```, we will save this by hitting ```Esc```, then
 
 ![](images/alias3.PNG)
 
+## Danger Zone - Removing Files/Directories
+
+You can also remove files or directories. BUT, be very careful there is no undo! You can remove a file with ```rm file1``` and you can remove a directory with ```rm -r directory```. 
+
 
 # References
 1. [Towards Data Science](https://towardsdatascience.com/why-do-bioinformaticians-avoid-using-windows-c5acb034f63c)
