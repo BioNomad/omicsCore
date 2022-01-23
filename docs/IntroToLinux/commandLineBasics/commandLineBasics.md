@@ -178,6 +178,8 @@ You can also remove files or directories. BUT, be very careful there is no undo!
 1. [Towards Data Science](https://towardsdatascience.com/why-do-bioinformaticians-avoid-using-windows-c5acb034f63c)
 2. [Intro To Basic Linux](https://tufts.app.box.com/s/x9aflewr2qw59pcbgcghbo9muykbi4ju)
 
+_________________________________________________________________________________________________________________________________________________________________________________
+
 [Next Workshop: Bash Scripting](../bashScripting/bashScripting.md)
 
 [Back To Introduction to Linux](../IntroToLinux.md)
