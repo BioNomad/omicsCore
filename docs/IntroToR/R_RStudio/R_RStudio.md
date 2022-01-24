@@ -7,3 +7,11 @@ If you don't already have R installed on your computer you can install it at [Th
 When you open up RStudio it will look something like this:
 
 ![](images/rstudio.PNG)
+
+___________________________________________________________________________________________________________________________________________________________________________________
+
+[Next Workshop](../Snytax_DataStructures/Snytax_DataStructures.md)
+
+[Back To Introduction to R](../IntroToR.md)
+
+[Back To The Main Page](../../index.md)
