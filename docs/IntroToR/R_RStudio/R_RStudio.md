@@ -25,7 +25,9 @@ In the script we write out ```10/4```. We can either run the whole script or jus
 
 * Ensure the cursor is on that one line
 * Hit ```Ctrl``` and ```Enter``` 
+
 OR
+
 * Hit ```Run``` at the top of the script editor
 
 If you want to run the whole script you'll need to source it. To do so all you need to do is Hit ```Source``` at the top of the screen. To save this script you can either go to ```File``` > ```Save``` or you can just hit ```Ctrl``` and ```S```.
