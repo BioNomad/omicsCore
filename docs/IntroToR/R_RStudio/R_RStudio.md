@@ -65,6 +65,7 @@ And help you determine what a certain function does:
 ![](images/help.PNG)
 
 > NOTE: to get the help window to populate with information you will need to type ```?``` before the function you are examining in the console. So using the function above as an example, you'd type ```?fisher.test``` into the console hit ```Enter``` and helpful information will populate in the ```Help``` window.
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 [Next Workshop: Sytax/Data Structures](../Syntax_DataStructures/Syntax_DataStructures.md)
