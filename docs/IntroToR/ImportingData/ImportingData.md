@@ -53,9 +53,11 @@ While files like the ones mentioned above are popular, so are excel spreadsheets
       
 Often times we just load in the whole library, if we were writing our own package we would try and call it for every function we use for traceability reasons. Now in excel spreadsheets you may only want to pull out one page or start from a row that isn't the first. To do so you can use:
 
-```library(openxlsx)```
+ ```library(openxlsx)```
 
-```xlsx_test <- read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)```
+ ```
+ xlsx_test <- read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)
+ ```
 
 So here we are pulling: the document "/Documents/test.xlsx", the second sheet, starting from the fifth row, specifying we do have column names, specifying we do not have row names. 
 
