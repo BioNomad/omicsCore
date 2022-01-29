@@ -24,7 +24,7 @@ So how do we get data from a nucleotide polymer in a chromosome, in a nucleus, i
 
 4. **Alignment/Data Analysis**: Now that we have these reads, we can align them to a known sequence and perform analyses.
 
-![](images/align.png)
+![](images/align.PNG)
 
 
 ## References
