@@ -112,49 +112,49 @@ To get the last 6 rows:
 
 ```tail(iris)```:
 
-```
-Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+    ```
+    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
 145          6.7         3.3          5.7         2.5 virginica
 146          6.7         3.0          5.2         2.3 virginica
 147          6.3         2.5          5.0         1.9 virginica
 148          6.5         3.0          5.2         2.0 virginica
 149          6.2         3.4          5.4         2.3 virginica
 150          5.9         3.0          5.1         1.8 virginica
-```
+    ```
 
 To get the length of a vector:
 
-```length(iris$Sepal.Length)```:
+    ```length(iris$Sepal.Length)```:
 
-```150```
+    ```150```
 
 To get the dimensions of a matrix/data frame:
 
-```dim(iris)```:
+    ```dim(iris)```:
 
-```150 5``` (so this would be 150 rows and 5 columns)
+    ```150 5``` (so this would be 150 rows and 5 columns)
 
 To get the number of columns/rows:
 
-```ncol(iris)```:
+    ```ncol(iris)```:
 
-```5```
+    ```5```
 
-```nrow(iris)```:
+    ```nrow(iris)```:
 
-```150```
+    ```150```
 
 To get your column names:
 
-```colnames(iris)```:
+    ```colnames(iris)```:
 
-```"Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"```
+    ```"Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"```
 
 To get your row names:
 
-```rownames(iris)```:
+    ```rownames(iris)```:
 
-```"1"   "2"   "3"   "4"   "5" ...```
+    ```"1"   "2"   "3"   "4"   "5" ...```
 
 Now that we know how to import our data and inspect it, we can go ahead and manipulate it!
 
