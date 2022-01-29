@@ -180,7 +180,7 @@ You can also remove files or directories. BUT, be very careful there is no undo!
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-[Next Workshop: Bash Scripting](../bashScripting/bashScripting.md)
+Next Workshop: [Bash Scripting](../bashScripting/bashScripting.md)
 
 [Back To Introduction to Linux](../IntroToLinux.md)
 
