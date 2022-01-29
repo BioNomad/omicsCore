@@ -162,6 +162,15 @@ So here we see each sequences is headed by a header with the node number, the se
 * The length of the sequence is 79 base pairs 
 * The kmer coverage is ~21.59
     
-    
 
 ## Assembly Statistics
+
+
+
+_________________________________________________________________________________________________________________________________________________________________________________
+
+Next Workshop: [Variant Calling](../variantCalling/variantCalling.md)
+
+[Back To DNA Workshops](../DNA.md)
+
+[Back To The Main Page](../../index.md)
