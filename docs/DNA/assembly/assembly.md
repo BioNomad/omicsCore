@@ -100,6 +100,23 @@ If this plot is populated (here it was not) it means you have a sequence that is
   
 In the process of getting read data, we needed to add adapters to our DNA fragments so that they would stick to our flow cell. The plot above shows the adapter content at different positions in a read. If we see there are adapters present, we should remove them before going forward.
 
+### Read Trimming
+
+While our data looks good, given the FastQC plots above, we will be thorough and run our reads through a trimming program called TrimGalore. 
+
+    #!/bin/bash
+    
+    # Trim our read data #
+    
+    # create a directory for our trimmed data
+    mkdir trim
+    
+    #run trim galore at default settings
+    trim_galore --paired -o trim raw_data/*
+
+We make sure to specify here that our data is paired so that it is trimmed correctly. By default, TrimGalore will autodetect partial/full adapters and remove them. Additionally, it will remove low quality bases and per our specifcation will output the trimmed files into the trim folder. 
+    
+
 ## Assemble Reads
 
 ## Assembly Statistics
