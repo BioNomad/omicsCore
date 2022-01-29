@@ -167,6 +167,10 @@ So here we see each sequences is headed by a header with the node number, the se
 
 In the velvet_57 folder you will find a log folder with information on the total number of nodes, N50 value, the max contig length, and the total length of the assembly.
 
+## References
+
+1. [An Introduction to Genome Assembly](https://training.galaxyproject.org/training-material/topics/assembly/tutorials/general-introduction/tutorial.html)
+2. [Quality Control](https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html)
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next Workshop: [Variant Calling](../variantCalling/variantCalling.md)
