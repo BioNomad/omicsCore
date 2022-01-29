@@ -108,6 +108,11 @@ Here we go through a few commonly used functions:
   * ```arrange()``` will arrange your rows by some variable - here we choose ```Petal.Width```
     
     > NOTE:  with arrange we can also specify that things are ordered to be descending by saying ```arrange(desc(YourVariable))```
+ 
+## References:
+
+1. [HBC Training](https://hbctraining.github.io/Intro-to-R-flipped/lessons/05_introR-data-wrangling.html)
+2. [Dplyr](https://dplyr.tidyverse.org/)
 _________________________________________________________________________________________________________________________________________________________________________________
 
 [Back To Introduction to R](../IntroToR.md)
