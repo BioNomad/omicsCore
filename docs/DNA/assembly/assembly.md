@@ -119,4 +119,49 @@ We make sure to specify here that our data is paired so that it is trimmed corre
 
 ## Assemble Reads
 
+Now that we have cleaned read data we can start to do some assembly. But what does this mean? Here is a graphic to make better sense of it:
+
+![](images/reads2genome.PNG)
+
+Here we see that to construct a genome we need to take our read data and *assemble* it into contigs which serve as a scaffold for our new genome! To assemble our reads into contigs we can use a program called Velvet. Velvet assembles our reads by using a de Bruijn graph a type of graph that displays overlaps between sequences. Determining these overlaps will help determine the order in which these sequences occur in our genome. 
+
+![](images/debrujin.PNG)
+
+But Velvet will need us to specify how large our kmers are going to be. Smaller kmers are great for determining the best connectivity and thereby the best sequence order and larger kmers will result in better specificity since you aren't breaking it down as much. Here we will use a kmer length of 29.
+
+    #!/bin/bash
+    
+    # Assemble our reads #
+    
+    # Break into k-mers with a length of 29
+    velveth velvet_29 29 -fmtAuto -create_binary -shortPaired -separate ./trim/mutant_R1_val_1.fq ./trim/mutant_R2_val_2.fq
+    
+    # Assemble into a contig fasta
+    velvetg velvet_29
+    
+Our contig file will be in the velvet_29 folder and named contigs.fa. Let's go over what the headers mean:
+
+    >NODE_11_length_79_cov_21.594936
+    TTGAACATTGGTTTTATGCAAGATCAGTAGAGATAACTGTAAAATGTTCTTAATATTGTC
+    AAAATGTAATGCTTGAAAGCGCTTTTAAAAAATATTATTATATACAT
+    >NODE_15_length_550_cov_29.652727
+    TTTTTTATTTTGAGTGGTTTTGTCCGTTACACTAGAAAACCGAAAGACAATAAAAATTTT
+    ATTCTTGCTGAGTCTGGCTTTCGGTAAGCTAGACAAAACGGACAAAATAAAAATTGGCAA
+    GGGTTTAAAGGTGGAGATTTTTTGAGTGATCTTCTCAAAAAATACTACCTGTCCCTTGCT
+    GATTTTTAAACGAGCACGAGAGCAAAACCCCCCTTTGCTGAGGTGGCAGAGGGCAGGTTT
+    TTTTGTTTCTTTTTTCTCGTAAAAAAAAGAAAGGTCTTAAAGGTTTTATGGTTTTGGTCG
+    GCACTGCCGACAGCCTCGCAGAGCACACACTTTATGAATATAAAGTATAGTGTGTTATAC
+    TTTACTTGGAAGTGGTTGCCGGAAAGAGCGAAAATGCCTCACATTTGTGCCACCTAAAAA
+    GGAGCGATTTACATATGAGTTATGCAGTTTGTAGAATGCAAAAAGTGAAATCAGCTGGAC
+    TAAAAGGCATGCAATTTCATAATCAAAGAGAGCGAAAAAGTAGAACGAATGATGATATTG
+    ACCATGAGCGAACACGTGAAAATTATGATTTGAAAAAT
+
+So here we see each sequences is headed by a header with the node number, the sequence length, and the coverage. The node number is the node number in the de Brujin graph, the length of the sequence is a measure of how many kmers overlapped by at least one base pair and the coverage is a measure of how many kmers overlap at each position. So for the first header ```NODE_11_length_79_cov_21.594936```:
+
+* The sequence is for node 11 in the graph
+* The length of the sequence is 79 base pairs 
+* The kmer coverage is ~21.59
+    
+    
+
 ## Assembly Statistics
