@@ -127,19 +127,19 @@ Here we see that to construct a genome we need to take our read data and *assemb
 
 ![](images/debrujin.PNG)
 
-But Velvet will need us to specify how large our kmers are going to be. Smaller kmers are great for determining the best connectivity and thereby the best sequence order and larger kmers will result in better specificity since you aren't breaking it down as much. Here we will use a kmer length of 29.
+But Velvet will need us to specify how large our kmers are going to be. Smaller kmers are great for determining the best connectivity and thereby the best sequence order and larger kmers will result in better specificity since you aren't breaking it down as much. Here we will use a kmer length of 57.
 
     #!/bin/bash
     
     # Assemble our reads #
     
-    # Break into k-mers with a length of 29
-    velveth velvet_29 29 -fmtAuto -create_binary -shortPaired -separate ./trim/mutant_R1_val_1.fq ./trim/mutant_R2_val_2.fq
+    # Break into k-mers with a length of 57
+    velveth velvet_57 57 -fmtAuto -create_binary -shortPaired -separate ./trim/mutant_R1_val_1.fq ./trim/mutant_R2_val_2.fq
     
     # Assemble into a contig fasta
-    velvetg velvet_29
+    velvetg velvet_57
     
-Our contig file will be in the velvet_29 folder and named contigs.fa. Let's go over what the headers mean:
+Our contig file will be in the velvet_57 folder and named contigs.fa. Let's go over what the headers mean:
 
     >NODE_11_length_79_cov_21.594936
     TTGAACATTGGTTTTATGCAAGATCAGTAGAGATAACTGTAAAATGTTCTTAATATTGTC
@@ -165,7 +165,7 @@ So here we see each sequences is headed by a header with the node number, the se
 
 ## Assembly Statistics
 
-
+In the velvet_57 folder you will find a log folder with information on the total number of nodes, N50 value, the max contig length, and the total length of the assembly.
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
