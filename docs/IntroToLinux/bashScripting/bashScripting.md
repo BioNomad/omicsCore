@@ -22,7 +22,7 @@ We can also specify permissions for you, the group and others. But first let's g
 
 ![](images/permissions.PNG)
 
-If you'll remember you can see permissions with ```ls -l```. ```r``` is read access, ```w``` is write access, and ```x``` is execute access. If you see a dash, that means the permission is not there. To change them you can specify user, group or other with ```u```, ```g```, and ```o```, respectively. You can add a permission with ```+``` and remove them with ```-```. So as an example to add read access to the group you can use ```chmod +gr file1```
+If you'll remember you can see permissions with ```ls -l```. ```r``` is read access, ```w``` is write access, and ```x``` is execute access. If you see a dash, that means the permission is not there. To change them you can specify user, group or other with ```u```, ```g```, and ```o```, respectively. You can add a permission with ```+``` and remove them with ```-```. So as an example to add read access to the group you can use ```chmod g+r file1```
 
 ## Using Variables
 
