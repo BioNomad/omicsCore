@@ -136,7 +136,7 @@ We won't go through every test case, but for a thorough review take a look at [R
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-[Next Workshop: HPC](../HPC/HPC.md)
+Next Workshop: [HPC](../HPC/HPC.md)
 
 [Back To Introduction to Linux](../IntroToLinux.md)
 
