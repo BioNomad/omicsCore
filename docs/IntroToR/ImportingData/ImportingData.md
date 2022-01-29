@@ -18,11 +18,11 @@ So to install the ```openxlsx``` package all you'll need to do is write out ```i
 
 When importing .csv files you'll need to specify the path to where you're file is located. So if your .csv file is in ```/Documents/test.csv```, you can download it like so:
 
-```read.csv("/Documents/test.csv")```
+```test <- read.csv("/Documents/test.csv")```
 
 We can also extend this to URL's as well:
 
-```read.csv(url("http://plugins.biogps.org/download/human_sample_annot.csv"))```
+```url_test <- read.csv(url("http://plugins.biogps.org/download/human_sample_annot.csv"))```
 
 Once you have data loaded you will see it in your environment window:
 
@@ -36,7 +36,7 @@ You can click this to inspect your data and it will appear in your script editor
 
 Like ```read.csv()```, ```read.table()``` can also import data. The latter function is very useful in that it can download files not delimted (a.k.a separated) by commas. So to open a ".tsv" file (a.k.a a file delimeted by a tab/```"/t"```):
 
-```read.table("/Documents/test.tsv",sep="\t",stringsAsFactors=FALSE)```
+```tsv_test <- read.table("/Documents/test.tsv",sep="\t",stringsAsFactors=FALSE)```
 
 You'll notice in the code above that we include the option, ```stringsAsFactors=FALSE```. If this was set to ```TRUE``` it would coerce your character columns into factor columns and this isn't always desired. So here we explicitly say ```stringsAsFactors=FALSE``` to be safe.
 
@@ -49,13 +49,13 @@ While files like the ones mentioned above are popular, so are excel spreadsheets
    
        ```library(openxlsx)```
       
-      ```read.xlsx("/Documents/test.xlsx")```
+      ```xlsx_test <- read.xlsx("/Documents/test.xlsx")```
       
 Often times we just load in the whole library, if we were writing our own package we would try and call it for every function we use for traceability reasons. Now in excel spreadsheets you may only want to pull out one page or start from a row that isn't the first. To do so you can use:
 
 ```library(openxlsx)```
 
-```read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)```
+```xlsx_test <- read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)```
 
 So here we are pulling: the document "/Documents/test.xlsx", the second sheet, starting from the fifth row, specifying we do have column names, specifying we do not have row names. 
 
