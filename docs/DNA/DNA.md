@@ -14,7 +14,7 @@ So how do we get data from a nucleotide polymer in a chromosome, in a nucleus, i
 
 ![](images/libprep.PNG)
 
-2. **Cluster Amplification**: The adapters then are stuck to a flow cell, and these bound fragments are amplified to increase the signal
+2. **Cluster Amplification**: The adapters then are stuck to a flow cell, and these bound fragments are amplified to increase the signal.
 
 ![](images/clustamp.PNG)
 
@@ -26,10 +26,20 @@ So how do we get data from a nucleotide polymer in a chromosome, in a nucleus, i
 
 ![](images/align.PNG)
 
+With these reads we can perform all kinds of analysis workflows. Here we explore the following:
+
+  * [Assembly](assembly/assembly.md)
+  * [Variant Calling](variantCalling/variantCalling.md)
+  * [ATAC-seq](atacSeq/atacSeq.md)
+  * [Methylation Analysis](methylationAnalysis/methylationAnalysis.md)
+        
+
 
 ## References
 
 1. [An Introduction to Next-Generation Sequencing Technology](https://www.illumina.com/content/dam/illumina-marketing/documents/products/illumina_sequencing_introduction.pdf)
 _________________________________________________________________________________________________________________________________________________________________________________
+
+Next Workshop: [Assembly](assembly/assembly.md)
 
 [Return To The Main Page](../index.md)
