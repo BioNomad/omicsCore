@@ -24,6 +24,14 @@ We can also extend this to URL's as well:
 
 ```read.csv(url("http://plugins.biogps.org/download/human_sample_annot.csv"))```
 
+Once you have data loaded you will see it in your environment window:
+
+![](images/click.PNG)
+
+You can click this to inspect your data and it will appear in your script editor window:
+
+![](images/view.PNG)
+
 ## read.table()
 
 Like ```read.csv()```, ```read.table()``` can also import data. The latter function is very useful in that it can download files not delimted (a.k.a separated) by commas. So to open a ".tsv" file (a.k.a a file delimeted by a tab/```"/t"```):
