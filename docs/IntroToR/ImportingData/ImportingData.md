@@ -47,11 +47,13 @@ While files like the ones mentioned above are popular, so are excel spreadsheets
    
        ```library(openxlsx)```
       
+      
       ```xlsx_test <- read.xlsx("/Documents/test.xlsx")```
       
 Often times we just load in the whole library, if we were writing our own package we would try and call it for every function we use for traceability reasons. Now in excel spreadsheets you may only want to pull out one page or start from a row that isn't the first. To do so you can use:
 
      ```library(openxlsx)```
+
 
      ```xlsx_test <- read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)```
 
@@ -64,6 +66,7 @@ Now before we go about manipulating it let's inspect it. For training purposes w
 To get a summary of each column:
 
     ```summary(iris)```:
+
 
     ```
     Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
@@ -79,11 +82,13 @@ To get the data's class:
 
     ```class(iris)```:
 
+
     ```data.frame```
 
 To get a display of the data's contents:
 
     ```str(iris)```:
+
 
     ```
     data.frame:	150 obs. of  5 variables:
@@ -97,6 +102,7 @@ To get a display of the data's contents:
 To get the first 6 rows:
 
     ```head(iris)```:
+ 
  
     ```
     Sepal.Length Sepal.Width Petal.Length Petal.Width Species
@@ -112,6 +118,7 @@ To get the last 6 rows:
 
     ```tail(iris)```:
 
+
     ```
     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
     145          6.7         3.3          5.7         2.5 virginica
@@ -126,11 +133,13 @@ To get the length of a vector:
 
     ```length(iris$Sepal.Length)```:
 
+
     ```150```
 
 To get the dimensions of a matrix/data frame:
 
     ```dim(iris)```:
+
 
     ```150 5``` (so this would be 150 rows and 5 columns)
 
@@ -138,9 +147,12 @@ To get the number of columns/rows:
 
     ```ncol(iris)```:
 
+
     ```5```
 
+
     ```nrow(iris)```:
+
 
     ```150```
 
@@ -148,11 +160,13 @@ To get your column names:
 
     ```colnames(iris)```:
 
+
     ```"Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width"  "Species"```
 
 To get your row names:
 
     ```rownames(iris)```:
+
 
     ```"1"   "2"   "3"   "4"   "5" ...```
 
