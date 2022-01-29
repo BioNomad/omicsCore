@@ -19,9 +19,7 @@ Now if your data is a data frame you have a special way of accessing coluns with
 
 ```iris$Sepal.Length```:
 
-```
-5.1 4.9 4.7 4.6 5.0 ...
-```
+```5.1 4.9 4.7 4.6 5.0 ...```
 
 This comes in handy for readability. While you can grab your data by column number, it is much easier to read that you are grabbing Sepal Length. To grab mulitple columns/rows, you can do the following for both data frames and matrices:
 
@@ -109,11 +107,14 @@ Here we go through a few commonly used functions:
     
     > NOTE:  with arrange we can also specify that things are ordered to be descending by saying ```arrange(desc(YourVariable))```
  
+ 
 ## References:
 
 1. [HBC Training](https://hbctraining.github.io/Intro-to-R-flipped/lessons/05_introR-data-wrangling.html)
 2. [Dplyr](https://dplyr.tidyverse.org/)
+
 _________________________________________________________________________________________________________________________________________________________________________________
+
 
 [Back To Introduction to R](../IntroToR.md)
 
