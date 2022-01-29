@@ -1,6 +1,10 @@
 # Manipulating Data
 
-So now that we have downloaded
+So now that we have downloaded our data we can get to manipulating it! But before we go about manipulating it let's inspect it. For training purposes we will inspect a base training dataset in R called iris:
+
+To get a summary of each column:
+
+```summary(iris)```
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
