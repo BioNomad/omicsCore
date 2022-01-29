@@ -115,7 +115,7 @@ squareInput(5)
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-[Next Workshop: Importing Data](../ImportingData/ImportingData.md)
+Next Workshop: [Importing Data](../ImportingData/ImportingData.md)
 
 [Back To Introduction to R](../IntroToR.md)
 
