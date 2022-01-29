@@ -158,7 +158,7 @@ Now that we know how to import our data and inspect it, we can go ahead and mani
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-[Next Workshop: Manipulating Data](../ManipulatingData/ManipulatingData.md)
+Next Workshop: [Manipulating Data](../ManipulatingData/ManipulatingData.md)
 
 [Back To Introduction to R](../IntroToR.md)
 
