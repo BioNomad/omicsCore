@@ -57,7 +57,11 @@ Often times we just load in the whole library, if we were writing our own packag
 
 ```xlsx_test <- read.xlsx("/Documents/test.xlsx",sheet=2,startRow = 5,colNames = TRUE,rowNames = FALSE)```
 
-So here we are pulling: the document "/Documents/test.xlsx", the second sheet, starting from the fifth row, specifying we do have column names, specifying we do not have row names. Now before we go about manipulating it let's inspect it. For training purposes we will inspect a base training dataset in R called iris:
+So here we are pulling: the document "/Documents/test.xlsx", the second sheet, starting from the fifth row, specifying we do have column names, specifying we do not have row names. 
+
+## Inspecting Data
+
+Now before we go about manipulating it let's inspect it. For training purposes we will inspect a base training dataset in R called iris:
 
 To get a summary of each column:
 
@@ -70,7 +74,8 @@ Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species
  Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
  Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
  3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500 
+ 
 ```
 
 To get the data's class:
@@ -90,6 +95,7 @@ To get a display of the data's contents:
  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
+ 
  ```
  
  To get the first 6 rows:
@@ -104,6 +110,7 @@ To get a display of the data's contents:
 4          4.6         3.1          1.5         0.2  setosa
 5          5.0         3.6          1.4         0.2  setosa
 6          5.4         3.9          1.7         0.4  setosa
+
 ```
 
 To get the last 6 rows:
@@ -118,6 +125,7 @@ To get the last 6 rows:
 148          6.5         3.0          5.2         2.0 virginica
 149          6.2         3.4          5.4         2.3 virginica
 150          5.9         3.0          5.1         1.8 virginica
+
 ```
 
 To get the length of a vector:
