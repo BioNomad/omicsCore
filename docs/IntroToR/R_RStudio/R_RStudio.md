@@ -70,7 +70,7 @@ And help you determine what a certain function does:
 
 _________________________________________________________________________________________________________________________________________________________________________________
 
-[Next Workshop: Sytax/Data Structures](../Syntax_DataStructures/Syntax_DataStructures.md)
+Next Workshop: [Sytax/Data Structures](../Syntax_DataStructures/Syntax_DataStructures.md)
 
 [Back To Introduction to R](../IntroToR.md)
 
