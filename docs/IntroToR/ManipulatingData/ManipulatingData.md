@@ -1,67 +1,94 @@
 # Manipulating Data
 
-So now that we have downloaded and inspected our data we can get to manipulating it! But before we go about manipulating it let's inspect it. For training purposes we will inspect a base training dataset in R called iris:
+So now that we have downloaded and inspected our data we can get to manipulating it! So to start, let's talk about accessing parts of your data. To grab the first column in a data frame/matrix you can do so like:
 
-To get a summary of each column:
+```iris[,1]```:
 
-```summary(iris)```:
+```5.1 4.9 4.7 4.6 5.0 5.4 ...```
 
-```
-Sepal.Length    Sepal.Width     Petal.Length    Petal.Width          Species  
- Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100   setosa    :50  
- 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300   versicolor:50  
- Median :5.800   Median :3.000   Median :4.350   Median :1.300   virginica :50  
- Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199                  
- 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800                  
- Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
-```
+To grab the first row:
 
-To get the data's class:
-
-```class(iris)```:
-
-```data.frame```
-
-To get a display of the data's contents:
-
-```str(iris)```:
+```iris[1,]```:
 
 ```
-'data.frame':	150 obs. of  5 variables:
- $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
- $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
- $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
- $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
- $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...
- ```
- 
- To get the first 6 rows:
- 
- ```head(iris)```:
- 
- ```
-   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa
 ```
 
-To get the last 6 rows:
+Now if your data is a data frame you have a special way of accessing coluns with the ```$``` operator:
 
-```tail(iris)```:
+```iris$Sepal.Length```:
 
 ```
-    Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-145          6.7         3.3          5.7         2.5 virginica
-146          6.7         3.0          5.2         2.3 virginica
-147          6.3         2.5          5.0         1.9 virginica
-148          6.5         3.0          5.2         2.0 virginica
-149          6.2         3.4          5.4         2.3 virginica
-150          5.9         3.0          5.1         1.8 virginica
+5.1 4.9 4.7 4.6 5.0 ...
 ```
+
+This comes in handy for readability. While you can grab your data by column number, it is much easier to read that you are grabbing Sepal Length. To grab mulitple columns/rows, you can do the following for both data frames and matrices:
+
+```iris[,c(1,3,4)]``` (grabbing the first, third, and fourth columns):
+
+```
+  Sepal.Length Petal.Length Petal.Width
+1          5.1          1.4         0.2
+2          4.9          1.4         0.2
+3          4.7          1.3         0.2
+4          4.6          1.5         0.2
+5          5.0          1.4         0.2
+6          5.4          1.7         0.4
+```
+
+In a data frame, to access columns you can be more specific and specify by column name:
+
+```iris[c("Petal.Length","Species")]```
+
+```
+  Petal.Length Species
+1          1.4  setosa
+2          1.4  setosa
+3          1.3  setosa
+4          1.5  setosa
+5          1.4  setosa
+6          1.7  setosa
+```
+
+## Subsetting Data
+
+To subset our data we need to know a little bit about the different logical operators:
+
+| Operator | Description |
+:-------|:-----|
+| > | greater than | 
+| >= | greater than or equal |
+| < | less than |
+| <= | less than or equal |
+| == | equals | 
+| != | not equal |
+| & | and |
+| \| | or|
+
+Let's go through a few of these!
+
+Subsetting so that we only have rows where the Petal Length is greater than 1:
+
+```iris[iris$Petal.Length > 1,]```
+
+Subsetting so that we only have rows where Petal Length is less than 1.5:
+
+```iris[iris$Petal.Length < 1.5,]```
+
+Subsetting so that we only have rows where the Species is setosa:
+
+```iris[iris$Species == "setosa",]```
+
+Subsetting so that we only have rows where the Species is not setosa:
+
+```iris[iris$Species != "setosa",]```
+
+Subsetting so that we only have rows where the Species is setosa or versicolor:
+
+```iris[iris$Species != "setosa" | iris$Species != "versicolor" ,]```
+
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 [Back To Introduction to R](../IntroToR.md)
