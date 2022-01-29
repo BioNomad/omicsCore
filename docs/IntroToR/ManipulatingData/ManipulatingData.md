@@ -88,7 +88,26 @@ Subsetting so that we only have rows where the Species is setosa or versicolor:
 
 ```iris[iris$Species != "setosa" | iris$Species != "versicolor" ,]```
 
+## Using Dplyr
 
+When subsetting data we should also mention the R package dplyr. This package has functionality to neatly modify data frames. Let's go through a quick example:
+
+```
+filtered <- iris %>%
+  filter(Species == "setosa") %>%
+  select(-Petal.Length) %>%
+  mutate(SpeciesWithPetalWidth = paste(Species,Petal.Width,sep="")) %>%
+  arrange(Petal.Width)
+```
+
+Here we go through a few commonly used functions:
+
+  * ```filter()``` will filter by some logical experssion
+  * ```select()``` will select a column - here we remove a column by saying ```select(-Petal.Length)```
+  * ```mutate()``` will create a new column
+  * ```arrange()``` will arrange your rows by some variable - here we choose ```Petal.Width```
+    
+    > NOTE:  with arrange we can also specify that things are ordered to be descending by saying ```arrange(desc(YourVariable))```
 _________________________________________________________________________________________________________________________________________________________________________________
 
 [Back To Introduction to R](../IntroToR.md)
