@@ -185,7 +185,7 @@ So we generated 10 different contig files using different kmer lengths. How do w
 
     #loop through our different contig lengths 
     for(i in 21:31){
-      log=read.delim(paste("./tufts/omicsCore/assembly/velvet/velvet_",as.character(i),"/Log",sep = ""))
+      log=read.delim(paste("./velvet/velvet_",as.character(i),"/Log",sep = ""))
       nodes.i <- as.numeric(strsplit(strsplit(log[18,],"graph has ")[[1]][2]," ")[[1]][1])
       n50.i <- as.numeric(strsplit(strsplit(log[18,],"n50 of ")[[1]][2],",")[[1]][1])
       max.i <- as.numeric(strsplit(strsplit(log[18,],"max ")[[1]][2],",")[[1]][1])
