@@ -1,3 +1,7 @@
+# Quality Control
+
+Now that we have our read data, we should take a look at the structure and how to assess if it's quality is alright to proceed.
+
 ## Fastq File Format
 
 Read data is stored into files called fastq files. These files are laid out like so:
@@ -14,7 +18,7 @@ These quality scores are associated with the probability that the sequencer call
 
 So before we go and start assembling our genome, we should confirm that our read data quality is alright.
 
-## Quality Control
+## FastQC Quality Control
 
 To get an idea of how well our read data quality we can use a package called FastQC. To do so we will write a bash script:
 
