@@ -42,6 +42,38 @@ Here we note that the quality scores look good and the ratio of base pairs is go
 
 ## Trimming and Filtering
 
+To trim we will be using a tool called Trimmomatic. Trimmomatic will ask that you specify the adapter for it. Let's write a bash script to go through and trim our read data.
+
+    #!/bin/bash
+    
+    # Trim our read data #
+    
+    # Make a directory for our trimmed read data and adapters
+    mkdir trim
+    mkdir adapter
+    
+    # Grab our adapters
+    wget https://github.com/timflutre/trimmomatic/blob/master/adapters/TruSeq3-PE-2.fa -P adapter/
+    
+    # Activate our trimmomatic environment
+    source activate trimmomatic_0.39
+    adapterfile=adapter/TruSeq3-PE-2.fa
+  
+    # Trim normal tissue
+    trimmomatic PE raw_data/SLGFSK-N_231335_r1_chr5_12_17.fastq.gz raw_data/SLGFSK-N_231335_r2_chr5_12_17.fastq.gz \
+                trim/SLGFSK-N_231335_r1.trim.fastq.gz trim/SLGFSK-N_231335_r1.un.trim.fastq.gz \
+                trim/SLGFSK-N_231335_r2.trim.fastq.gz trim/SLGFSK-N_231335_r2.un.trim.fastq.gz \
+                SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:$adapterfile:2:30:10:8
+    
+    # Trim tumor tissue
+    trimmomatic PE raw_data/SLGFSK-T_231336_r1_chr5_12_17.fastq.gz raw_data/SLGFSK-T_231336_r2_chr5_12_17.fastq.gz \
+                trim/SLGFSK-T_231336_r1.trim.fastq.gz trim/SLGFSK-T_231336_r1.un.trim.fastq.gz \
+                trim/SLGFSK-T_231336_r2.trim.fastq.gz trim/SLGFSK-T_231336_r2.un.trim.fastq.gz \
+                SLIDINGWINDOW:4:20 MINLEN:25 ILLUMINACLIP:$adapterfile:2:30:10:8
+                
+                
+   
+   
 ## Mapping Reads
 
 ## References
