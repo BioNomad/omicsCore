@@ -121,7 +121,7 @@ We make sure to specify here that our data is paired so that it is trimmed corre
 
 Now that we have cleaned read data we can start to do some assembly. But what does this mean? Here is a graphic to make better sense of it:
 
-![](images/reads2genome.PNG)
+![](images/read2genome.PNG)
 
 Here we see that to construct a genome we need to take our read data and *assemble* it into contigs which serve as a scaffold for our new genome! To assemble our reads into contigs we can use a program called Velvet. Velvet assembles our reads by using a de Bruijn graph a type of graph that displays overlaps between sequences. Determining these overlaps will help determine the order in which these sequences occur in our genome. 
 
