@@ -6,6 +6,39 @@ The genomic landscape in tumor is complicated and in addition to variants being 
 
 ## Quality Control
 
+Let's start by writing a bash script to download sequencing data from a individual. We will be downloading paired tumor data and paired matched normal data. 
+
+    #!/bin/bash
+    
+    # Download data and perform FastQC #
+    
+    #make directory for raw data
+    mkdir raw_data
+    cd raw_data
+    
+    #make directory for normal paired data
+    mkdir norm
+    cd norm
+    wget https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r1_chr5_12_17.fastq.gz
+    wget https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r2_chr5_12_17.fastq.gz
+    cd ../
+    
+    #make a directory for tumor data
+    mkdir tumor
+    cd tumor
+    wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r1_chr5_12_17.fastq.gz
+    wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r2_chr5_12_17.fastq.gz
+    cd ../../
+    
+    #make a directory for fastqc results
+    mkdir fastqc
+    mkdir fastqc/norm/
+    mkdir fastqc/tumor/
+    
+    #run FastQC on normal and tumor data
+    fastqc raw_data/norm/* -o /fastqc/norm/
+    fastqc raw_data/tumor/* -o /fastqc/tumor
+
 ## References
 
 1. [Loss of Heterozygosity](https://en.wikipedia.org/wiki/Loss_of_heterozygosity)
