@@ -171,6 +171,7 @@ In the velvet_57 folder you will find a log folder with information on the total
 
 1. [An Introduction to Genome Assembly](https://training.galaxyproject.org/training-material/topics/assembly/tutorials/general-introduction/tutorial.html)
 2. [Quality Control](https://training.galaxyproject.org/training-material/topics/sequence-analysis/tutorials/quality-control/tutorial.html)
+
 _________________________________________________________________________________________________________________________________________________________________________________
 
 Next Workshop: [Variant Calling](../variantCalling/variantCalling.md)
