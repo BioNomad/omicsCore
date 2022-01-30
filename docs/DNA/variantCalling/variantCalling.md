@@ -15,29 +15,31 @@ Let's start by writing a bash script to download sequencing data from a individu
     #make directory for raw data
     mkdir raw_data
     cd raw_data
-    
-    #make directory for normal paired data
-    mkdir norm
-    cd norm
+
     wget https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r1_chr5_12_17.fastq.gz
     wget https://zenodo.org/record/2582555/files/SLGFSK-N_231335_r2_chr5_12_17.fastq.gz
-    cd ../
-    
-    #make a directory for tumor data
-    mkdir tumor
-    cd tumor
     wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r1_chr5_12_17.fastq.gz
     wget https://zenodo.org/record/2582555/files/SLGFSK-T_231336_r2_chr5_12_17.fastq.gz
-    cd ../../
+    cd ../
     
     #make a directory for fastqc results
     mkdir fastqc
-    mkdir fastqc/norm/
-    mkdir fastqc/tumor/
     
     #run FastQC on normal and tumor data
-    fastqc raw_data/norm/* -o /fastqc/norm/
-    fastqc raw_data/tumor/* -o /fastqc/tumor
+    fastqc raw_data/* -o fastqc
+    
+    #run multiqc on our data
+    source activate multiqc_1.11
+    cd fastqc
+    multiqc .
+
+
+In the preceding script we make a directory for our data, download it, run FastQC on it, and then run MultiQC on the FastQC results. For help interpreting FastQC plot see our workshop on [Quality Control](../qualityControl/qualityControl.md). MultiQC is a neat tool available through conda and we access it via a virtual environment. To learn how to create your own virtual environment visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Here are the resulting plots:
+
+![](qc.PNG)
+
+
+
 
 ## References
 
