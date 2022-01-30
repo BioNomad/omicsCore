@@ -1,9 +1,15 @@
 #!/bin/bash
 
-# Assemble our reads #
+# Run velvet for different kmer lengths #
 
-# Break into k-mers with a length of 29
-velveth velvet_29 29 -fmtAuto -create_binary -shortPaired -separate ./trim/mutant_R1_val_1.fq ./trim/mutant_R2_val_2.fq
+#make a directory to house all the velvet output
+mkdir velvet
 
-# Assemble into a contig fasta
-velvetg velvet_29
+#loop through different kmer lengths
+for i in 21 22 23 24 25 26 27 28 29 30 31
+do
+        #run velvet at different kmer lengths
+        velveth ./velvet/velvet_$i $i -fmtAuto -create_binary -shortPaired -separate ./trim/mutant_R1_val_1.fq ./trim/mutant_R2_val_2.fq
+        #assemble into contigs
+        velvetg ./velvet/velvet_$i
+done
