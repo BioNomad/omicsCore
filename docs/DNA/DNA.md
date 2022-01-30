@@ -28,6 +28,7 @@ So how do we get data from a nucleotide polymer in a chromosome, in a nucleus, i
 
 With these reads we can perform all kinds of analysis workflows. Here we explore the following:
 
+  * [Quality Control](qualityControl/qualityControl.md)
   * [Assembly](assembly/assembly.md)
   * [Variant Calling](variantCalling/variantCalling.md)
   * [ATAC-seq](atacSeq/atacSeq.md)
