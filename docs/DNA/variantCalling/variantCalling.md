@@ -34,12 +34,15 @@ Let's start by writing a bash script to download sequencing data from a individu
     multiqc .
 
 
-In the preceding script we make a directory for our data, download it, run FastQC on it, and then run MultiQC on the FastQC results. For help interpreting FastQC plot see our workshop on [Quality Control](../qualityControl/qualityControl.md). MultiQC is a neat tool available through conda and we access it via a virtual environment. To learn how to create your own virtual environment visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Here are the resulting plots:
+In the preceding script we make a directory for our data, download it, run FastQC on it, and then run MultiQC on the FastQC results. For help interpreting FastQC plot see our workshop on [Quality Control](../qualityControl/qualityControl.md). MultiQC is a tool that can combine FastQC reports into one document for ease of viewing. MultiQC is available through conda and we access it via a virtual environment. To learn how to create your own virtual environment with custom packages installed visit [Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html). Here are the resulting plots:
 
-![](qc.PNG)
+![](multiqc.PNG)
 
+Here we note that the quality scores look good and the ratio of base pairs is good. However, we can see that there are duplicated sequences, adapters present and the shape of the GC content distribution is off for the tumor samples. Let's go about fixing what we can with a trimming tool.
 
+## Trimming and Filtering
 
+## Mapping Reads
 
 ## References
 
